@@ -81,11 +81,18 @@ ul, ol { margin: 0; padding: 0; }
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity .6s ease-out, transform .6s ease-out;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+/* Versão mais rápida e sutil, usada nos cards de Diferenciais, Serviços
+   e nas fotos do Portfólio — cada card/foto revela por conta própria */
+.card.reveal,
+.carrossel__item.reveal {
+  transform: translateY(14px);
+  transition: opacity .35s ease-out, transform .35s ease-out;
 }
 
 /* ===== BUTTONS ===== */
@@ -96,20 +103,7 @@ ul, ol { margin: 0; padding: 0; }
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
-}
-.btn--primary {
-  background: var(--orange);
-  color: var(--navy); /* laranja com texto navy — contraste correto */
-  box-shadow: var(--shadow);
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(6, 43, 96, 0.16);
-}
-.btn--primary:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 /* Botão verde do WhatsApp com texto branco, no mesmo estilo do botão oficial do WhatsApp */
@@ -117,12 +111,14 @@ ul, ol { margin: 0; padding: 0; }
   background: var(--verde-whatsapp);
   color: var(--white);
   border: none;
-  cursor: pointer;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform .15s ease-out, box-shadow .15s ease-out;
 }
 .btn--whatsapp:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 26px rgba(6, 43, 96, 0.16);
+}
+.btn--whatsapp:active {
+  transform: scale(.97); /* efeito de "afundar" ao clicar/tocar */
 }
 
 .btn--outline {
@@ -139,7 +135,7 @@ ul, ol { margin: 0; padding: 0; }
   z-index: 100;
   background: var(--white);
   box-shadow: 0 2px 10px rgba(6,43,96,.08);
-  transition: box-shadow .2s ease;
+  transition: box-shadow .2s ease-in-out;
 }
 .nav.is-scrolled {
   box-shadow: 0 4px 18px rgba(6,43,96,.16);
@@ -190,7 +186,7 @@ ul, ol { margin: 0; padding: 0; }
   gap: 4px;
   transform: translateY(-140%);
   opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
+  transition: transform .25s ease-in-out, opacity .25s ease-in-out;
   box-shadow: 0 8px 18px rgba(6,43,96,.1);
 }
 .nav__menu.is-open {
@@ -202,7 +198,7 @@ ul, ol { margin: 0; padding: 0; }
   padding: 12px 4px;
   border-bottom: 1px solid rgba(6,43,96,.08);
   font-weight: 500;
-  transition: color .15s ease;
+  transition: color .15s ease-out, transform .15s ease-out;
 }
 .nav__menu a:hover { color: var(--orange); }
 .nav__menu a.is-active:not(.nav__cta) { color: var(--orange); }
@@ -215,6 +211,9 @@ ul, ol { margin: 0; padding: 0; }
   padding: 12px !important;
   border-bottom: none !important;
   font-weight: 700;
+}
+.nav__cta:active {
+  transform: scale(.97); /* efeito de "afundar" ao clicar/tocar */
 }
 
 @media (min-width: 900px) {
@@ -286,7 +285,7 @@ ul, ol { margin: 0; padding: 0; }
   border: 1px solid rgba(151,147,146,.25);
   border-radius: var(--radius);
   padding: 28px;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition: transform .2s ease-out, box-shadow .2s ease-out, border-color .2s ease-out;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -303,6 +302,11 @@ ul, ol { margin: 0; padding: 0; }
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  transition: background .2s ease-out, color .2s ease-out; /* bônus: destaca no hover (desktop) */
+}
+.card:hover .card__icon {
+  background: rgba(254, 148, 18, .15);
+  color: var(--orange);
 }
 .card__icon svg { width: 24px; height: 24px; }
 .card h3 { font-size: 1.1rem; }
@@ -357,7 +361,7 @@ ul, ol { margin: 0; padding: 0; }
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(6, 43, 96, 0.06);
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease-out, box-shadow .2s ease-out;
   margin: 0;
 }
 .carrossel__item:hover {
@@ -397,7 +401,7 @@ ul, ol { margin: 0; padding: 0; }
   justify-content: center;
   cursor: pointer;
   opacity: .55;
-  transition: opacity .2s ease, background .2s ease;
+  transition: opacity .2s ease-out, background .2s ease-out;
 }
 .carrossel__seta svg { width: 22px; height: 22px; }
 .carrossel__seta:hover { opacity: 1; background: var(--navy); }
@@ -459,7 +463,7 @@ ul, ol { margin: 0; padding: 0; }
   background: var(--gray-tint);
   border-radius: var(--radius);
   padding: 4px 20px;
-  transition: background .2s ease;
+  transition: background .2s ease-in-out;
 }
 .faq__item summary {
   cursor: pointer;
@@ -468,7 +472,7 @@ ul, ol { margin: 0; padding: 0; }
   list-style: none;
   position: relative;
   padding-right: 28px;
-  transition: color .15s ease;
+  transition: color .15s ease-out;
 }
 .faq__item summary:hover { color: var(--navy-light); }
 .faq__item summary::-webkit-details-marker { display: none; }
@@ -480,14 +484,18 @@ ul, ol { margin: 0; padding: 0; }
   font-size: 1.3rem;
   color: var(--orange);
   display: inline-block;
-  transition: transform .25s ease;
+  transition: transform .25s ease-in-out;
 }
-.faq__item[open] { background: #eeece9; }
-.faq__item[open] summary::after { transform: rotate(45deg); }
+/* ".is-aberto" é controlada pelo js/faq.js, junto com a animação de altura —
+   por isso não usamos mais o seletor [open] aqui (ele mudaria de estado
+   antes da animação de fechar terminar) */
+.faq__item.is-aberto { background: #eeece9; }
+.faq__item.is-aberto summary::after { transform: rotate(45deg); }
 .faq__item p {
   padding-bottom: 18px;
   color: #3d4a5c;
   margin: 0;
+  overflow: hidden; /* necessário pra animação de altura não "vazar" o texto */
 }
 
 /* ===== CTA FINAL ===== */
@@ -603,7 +611,7 @@ body.tem-aviso-cookies .whatsapp-float {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background .15s ease, color .15s ease;
+  transition: background .15s ease-out, color .15s ease-out;
 }
 .footer__social a:hover {
   background: var(--orange);
@@ -632,12 +640,15 @@ body.tem-aviso-cookies .whatsapp-float {
   background: var(--verde-whatsapp);
   color: var(--white);
   display: flex;
-  transition: bottom .2s ease;
+  transition: bottom .2s ease-in-out, transform .15s ease-out;
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
   z-index: 200;
   animation: pulse 2.4s infinite;
+}
+.whatsapp-float:active {
+  transform: scale(.97); /* efeito de "afundar" ao clicar/tocar */
 }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5), 0 6px 18px rgba(0,0,0,.25); }

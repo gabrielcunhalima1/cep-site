@@ -50,7 +50,7 @@ if (trilho) {
 
   fotosEmOrdemAleatoria.forEach((foto) => {
     const item = document.createElement('figure');
-    item.className = 'carrossel__item';
+    item.className = 'carrossel__item reveal'; // "reveal" é a animação de entrada ao rolar (interacoes.js)
     item.innerHTML = `
       <img src="${foto.src}" alt="${foto.legenda}" loading="lazy" decoding="async" width="480" height="320">
       <figcaption>${foto.legenda}</figcaption>

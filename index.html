@@ -5,13 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CEP Gestão e Engenharia | Construção e Reforma em Belo Horizonte</title>
 <meta name="description" content="A CEP gerencia sua construção ou reforma em Belo Horizonte com orçamento claro, cronograma cumprido e acompanhamento em tempo real pelo WhatsApp. Peça seu orçamento.">
-<meta name="keywords" content="construção Belo Horizonte, gestão de obra BH, construtora BH, construção residencial, construção comercial, reforma residencial, reforma comercial">
+<meta name="keywords" content="construção Belo Horizonte, gestão de obra Belo Horizonte, construtora Belo Horizonte, construção residencial, construção comercial, reforma residencial, reforma comercial">
+
+<!-- REMOVER AO LANÇAR NO DOMÍNIO FINAL: impede o Google de indexar o site
+     antes de estar no endereço definitivo -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- [ATUALIZAR DOMÍNIO] domínio provisório, ainda não confirmado (tentativa:
+     cepgestaoengenharia.com.br) — quando confirmar, trocar aqui e nos outros
+     dois lugares marcados com [ATUALIZAR DOMÍNIO] neste arquivo -->
+<link rel="canonical" href="https://www.cepgestaoengenharia.com.br/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="CEP Gestão e Engenharia | Construção e Reforma em BH">
+<meta property="og:title" content="CEP Gestão e Engenharia | Construção e Reforma em Belo Horizonte">
 <meta property="og:description" content="Orçamento esclarecedor, cronograma cumprido e acompanhamento em tempo real. Peça seu orçamento no WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<!-- TODO Pedro: og:image ainda não existe — caminho já referenciado pra não esquecer de linkar quando a imagem chegar -->
+<meta property="og:image" content="/img/og-image.jpg">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
@@ -30,9 +41,10 @@
   "image": "",
   "telephone": "+55 31 99893-4183",
   "areaServed": ["Belo Horizonte", "Região Metropolitana de Belo Horizonte"],
-  "url": "https://www.cepgestao.com.br"
+  "url": "https://www.cepgestaoengenharia.com.br"
 }
 </script>
+<!-- [ATUALIZAR DOMÍNIO] essa era a 3ª e última ocorrência do domínio provisório -->
 </head>
 <body>
 
@@ -74,22 +86,22 @@
   <section class="section" id="diferenciais">
     <div class="container">
       <h2>Por que construir com a CEP</h2>
-      <div class="cards cards--3 reveal">
-        <div class="card">
+      <div class="cards cards--3">
+        <div class="card reveal">
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3>Orçamento esclarecedor</h3>
           <p>Você não paga por material que não precisa. Cada etapa do orçamento é explicada, para você saber exatamente onde seu dinheiro está indo.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3>Agilidade com cronograma real</h3>
           <p>Prazo combinado é prazo cumprido. Planejamos cada etapa para que sua obra ande no ritmo certo, sem enrolação.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
@@ -141,16 +153,16 @@
   <section class="section" id="servicos">
     <div class="container">
       <h2>O que fazemos</h2>
-      <div class="cards cards--3 reveal">
-        <div class="card">
+      <div class="cards cards--3">
+        <div class="card reveal">
           <h3>Construção residencial</h3>
           <p>Casas e apartamentos construídos do zero — ou reformados, se for o seu caso — com planejamento do início ao acabamento.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <h3>Construção comercial</h3>
           <p>Espaços comerciais construídos ou reformados, prontos para operar, com cronograma que respeita o seu negócio.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <h3>Gestão de obra</h3>
           <p>Já tem o projeto? Cuidamos da organização e execução do início ao fim.</p>
         </div>
@@ -158,7 +170,54 @@
     </div>
   </section>
 
-  <!-- ===== 5. CONTATO / CTA ===== -->
+  <!-- ===== 5. PORTFÓLIO ===== -->
+  <section class="section section--tint" id="portfolio">
+    <div class="container">
+      <h2>Nosso portfólio</h2>
+
+      <!-- As fotos aqui dentro são geradas pelo js/portfolio.js: ele monta a lista
+           de fotos, embaralha a ordem e cria os slides dentro de #trilhoPortfolio -->
+      <div class="carrossel">
+        <button type="button" class="carrossel__seta carrossel__seta--esquerda" id="setaEsquerda" aria-label="Ver fotos anteriores">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+
+        <div class="carrossel__trilho" id="trilhoPortfolio"></div>
+
+        <button type="button" class="carrossel__seta carrossel__seta--direita" id="setaDireita" aria-label="Ver mais fotos">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+
+      <p class="portfolio__aviso">Todas as imagens deste portfólio são publicadas com autorização dos proprietários dos imóveis.</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. DEPOIMENTOS ===== -->
+  <section class="section" id="depoimentos">
+    <div class="container">
+      <h2>O que dizem os clientes</h2>
+      <div class="testimonials-empty reveal">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="32" height="32"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <p><strong>Depoimentos reais em breve.</strong><br>A cada obra concluída, pedimos ao cliente uma avaliação — os primeiros relatos aparecerão aqui.</p>
+      </div>
+      <!-- TODO Pedro: substituir por depoimentos reais (foto/iniciais, nome, bairro, frase) coletados ao final de cada obra -->
+    </div>
+  </section>
+
+  <!-- ===== 7. SOBRE ===== -->
+  <section class="section section--dark" id="sobre">
+    <div class="container about reveal">
+      <h2>Quem está por trás da CEP</h2>
+      <p>Com sede em Belo Horizonte, a CEP é uma construtora jovem fundada por dois engenheiros. Nosso trabalho é gerenciar construções e reformas com foco em organização, planejamento e um cronograma bem definido — garantindo um serviço ágil e dentro do orçamento previsto.</p>
+      <div class="about__badge">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Registro CREA-MG <strong>TODO</strong> — ART emitida em cada obra</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CONTATO / CTA ===== -->
   <section class="section section--dark cta-final" id="contato">
     <div class="container reveal">
       <h2>Vamos conversar sobre a sua obra?</h2>
@@ -186,53 +245,6 @@
     </div>
   </section>
 
-  <!-- ===== 6. PORTFÓLIO ===== -->
-  <section class="section section--tint" id="portfolio">
-    <div class="container">
-      <h2>Nosso portfólio</h2>
-
-      <!-- As fotos aqui dentro são geradas pelo js/portfolio.js: ele monta a lista
-           de fotos, embaralha a ordem e cria os slides dentro de #trilhoPortfolio -->
-      <div class="carrossel reveal">
-        <button type="button" class="carrossel__seta carrossel__seta--esquerda" id="setaEsquerda" aria-label="Ver fotos anteriores">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
-        </button>
-
-        <div class="carrossel__trilho" id="trilhoPortfolio"></div>
-
-        <button type="button" class="carrossel__seta carrossel__seta--direita" id="setaDireita" aria-label="Ver mais fotos">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-      </div>
-
-      <p class="portfolio__aviso">Todas as imagens deste portfólio são publicadas com autorização dos proprietários dos imóveis.</p>
-    </div>
-  </section>
-
-  <!-- ===== 7. DEPOIMENTOS ===== -->
-  <section class="section" id="depoimentos">
-    <div class="container">
-      <h2>O que dizem os clientes</h2>
-      <div class="testimonials-empty reveal">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="32" height="32"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <p><strong>Depoimentos reais em breve.</strong><br>A cada obra concluída, pedimos ao cliente uma avaliação — os primeiros relatos aparecerão aqui.</p>
-      </div>
-      <!-- TODO Pedro: substituir por depoimentos reais (foto/iniciais, nome, bairro, frase) coletados ao final de cada obra -->
-    </div>
-  </section>
-
-  <!-- ===== 8. SOBRE ===== -->
-  <section class="section section--dark" id="sobre">
-    <div class="container about reveal">
-      <h2>Quem está por trás da CEP</h2>
-      <p>Com sede em Belo Horizonte, a CEP é uma construtora jovem fundada por dois engenheiros. Nosso trabalho é gerenciar construções e reformas com foco em organização, planejamento e um cronograma bem definido — garantindo um serviço ágil e dentro do orçamento previsto.</p>
-      <div class="about__badge">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <span>Registro CREA-MG <strong>TODO</strong> — ART emitida em cada obra</span>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== 9. FAQ ===== -->
   <section class="section" id="faq">
     <div class="container">
@@ -251,7 +263,7 @@
           <p>Sim. Somos registrados no CREA-MG e emitimos ART em cada obra realizada.</p>
         </details>
         <details class="faq__item">
-          <summary>Atendem em quais regiões de BH?</summary>
+          <summary>Atendem em quais regiões de Belo Horizonte?</summary>
           <p>Atendemos Belo Horizonte e Região Metropolitana.</p>
         </details>
         <details class="faq__item">
@@ -297,8 +309,9 @@
 
 <script src="js/whatsapp.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/interacoes.js"></script>
 <script src="js/portfolio.js"></script>
+<script src="js/interacoes.js"></script>
+<script src="js/faq.js"></script>
 <script src="js/formulario.js"></script>
 <script src="js/cookies.js"></script>
 </body>
