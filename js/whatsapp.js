@@ -2,8 +2,8 @@
 // Outros arquivos (formulario.js, por exemplo) usam a função montarLinkWhatsApp()
 // definida aqui embaixo, por isso este script precisa vir ANTES dos outros no HTML.
 
-// TODO Pedro: substituir pelo número real do WhatsApp Business da CEP (formato: 55 + DDD + número, só dígitos)
-const NUMERO_WHATSAPP = '5531900000000';
+// WhatsApp da CEP (Pedro Pedrosa)
+const NUMERO_WHATSAPP = '5531998934183';
 
 // Mensagem usada quando nenhuma mensagem específica é informada
 const MENSAGEM_PADRAO = 'Olá! Vim pelo site e quero um orçamento.';

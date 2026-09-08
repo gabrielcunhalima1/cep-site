@@ -1,0 +1,5 @@
+# Configuração do Netlify para este site.
+# O site é HTML/CSS/JS puro, sem etapa de build — só publicamos a pasta raiz,
+# onde já está o index.html.
+[build]
+  publish = "."

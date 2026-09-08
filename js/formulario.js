@@ -9,17 +9,15 @@ if (formularioTriagem) {
   formularioTriagem.addEventListener('submit', (evento) => {
     evento.preventDefault(); // impede o formulário de recarregar a página
 
-    // Pega os valores digitados/selecionados pelo visitante
+    // Pega os valores digitados/selecionados pelo visitante.
+    // Os três campos são "required" no HTML, então o navegador já garante
+    // que nenhum deles chega vazio aqui.
     const nomeCliente = formularioTriagem.nome.value.trim();
-    const tipoDeObra = formularioTriagem.tipoObra.value;
+    const tipoDeObra = formularioTriagem.tipoObra.value.toLowerCase();
     const cidadeCliente = formularioTriagem.cidade.value.trim();
 
-    // Monta um texto organizado a partir dos dados do formulário
-    const mensagem =
-      `Olá! Vim pelo site e quero um orçamento.\n` +
-      `Nome: ${nomeCliente}\n` +
-      `Tipo de obra: ${tipoDeObra}\n` +
-      `Cidade: ${cidadeCliente}`;
+    // Monta a mensagem numa frase só, pronta pra virar a primeira mensagem do WhatsApp
+    const mensagem = `Olá, vim pelo site! Sou ${nomeCliente} de ${cidadeCliente} e desejo o orçamento para minha ${tipoDeObra}.`;
 
     // Abre o WhatsApp em uma nova aba, já com a mensagem preenchida
     window.open(montarLinkWhatsApp(mensagem), '_blank', 'noopener');
