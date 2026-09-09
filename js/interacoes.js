@@ -84,3 +84,15 @@ if (usuarioPrefereMenosMovimento) {
   // Navegador muito antigo sem suporte a IntersectionObserver: mostra tudo direto
   elementosParaAnimar.forEach((elemento) => elemento.classList.add('is-visible'));
 }
+
+// --- Corrige o clique em "voltar ao topo" (rodapé e logo do menu) ---
+// O alvo desses links é o próprio cabeçalho (id="topo"), que é "sticky"
+// (fica grudado no topo da tela ao rolar). Por causa disso, o navegador
+// acha que ele "já está no topo da tela" e não rola a página — mesmo
+// quando estamos lá embaixo. Por isso rolamos manualmente até o topo.
+document.querySelectorAll('a[href="#topo"]').forEach((link) => {
+  link.addEventListener('click', (evento) => {
+    evento.preventDefault();
+    window.scrollTo({ top: 0, behavior: usuarioPrefereMenosMovimento ? 'auto' : 'smooth' });
+  });
+});

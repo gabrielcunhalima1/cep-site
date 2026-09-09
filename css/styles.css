@@ -230,7 +230,11 @@ ul, ol { margin: 0; padding: 0; }
     box-shadow: none;
   }
   .nav__menu a { border-bottom: none; padding: 0; }
-  .nav__cta { margin-top: 0; padding: 10px 20px !important; }
+  .nav__cta {
+    margin-top: 0;
+    padding: 8px 18px !important; /* levemente menor no computador */
+    background: rgba(254, 148, 18, 0.88); /* mesma cor laranja, com as bordas levemente translúcidas */
+  }
 }
 
 /* ===== HERO ===== */
