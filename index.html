@@ -21,7 +21,7 @@
 <meta property="og:description" content="Orçamento esclarecedor, cronograma cumprido e acompanhamento em tempo real. Peça seu orçamento no WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="/img/og-image.jpg">
+<meta property="og:image" content="https://www.cepgestaoengenharia.com.br/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
@@ -39,7 +39,7 @@
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "name": "CEP Gestão e Engenharia",
-  "image": "",
+  "image": "https://www.cepgestaoengenharia.com.br/img/og-image.jpg",
   "telephone": "+55 31 99893-4183",
   "areaServed": ["Belo Horizonte", "Região Metropolitana de Belo Horizonte"],
   "url": "https://www.cepgestaoengenharia.com.br"
@@ -309,8 +309,22 @@
 
 <!-- ===== AVISO DE COOKIES (LGPD) ===== -->
 <div class="aviso-cookies" id="avisoCookies" hidden>
-  <p>Usamos cookies para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa política de privacidade.</p>
-  <button type="button" id="botaoAceitarCookies" class="btn btn--outline">Entendi</button>
+  <div class="aviso-cookies__principal">
+    <p>
+      Usamos cookies para melhorar sua experiência de navegação.
+      <button type="button" id="botaoSaibaMaisCookies" class="aviso-cookies__saiba-mais" aria-expanded="false" aria-controls="detalhesCookies">Saiba mais</button>
+    </p>
+    <div class="aviso-cookies__botoes">
+      <button type="button" id="botaoRejeitarCookies" class="btn btn--outline">Só essenciais</button>
+      <button type="button" id="botaoAceitarCookies" class="btn btn--aceitar">Aceitar</button>
+    </div>
+  </div>
+  <div class="aviso-cookies__detalhes" id="detalhesCookies" hidden>
+    <p><strong>Quais dados coletamos:</strong> os dados que você preenche no formulário de orçamento (nome e cidade) e, quando ativarmos ferramentas de anúncio, dados de navegação (via Google Analytics e Meta Pixel).</p>
+    <p><strong>Para que usamos:</strong> entrar em contato pelo WhatsApp, entender como o site é usado e melhorar a eficiência dos anúncios.</p>
+    <p><strong>Com quem compartilhamos:</strong> quando as ferramentas de anúncio forem ativadas, com o Google e a Meta (Facebook/Instagram).</p>
+    <p><strong>Responsável:</strong> CEP Gestão e Engenharia. Dúvidas ou pedido de exclusão de dados: WhatsApp <a href="#" class="js-whatsapp-link" data-message="Olá! Tenho uma dúvida sobre os meus dados no site.">(31) 99893-4183</a>.</p>
+  </div>
 </div>
 
 <script src="js/whatsapp.js"></script>

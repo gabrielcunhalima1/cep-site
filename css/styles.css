@@ -566,26 +566,68 @@ ul, ol { margin: 0; padding: 0; }
   background: var(--navy);
   color: var(--white);
   padding: 16px 20px;
+  box-shadow: 0 -4px 18px rgba(0,0,0,.2);
+}
+/* precisa ter mais especificidade que ".aviso-cookies", senão o "display" dos
+   filhos acima sobrescreve o atributo "hidden" do HTML e o aviso nunca some */
+.aviso-cookies[hidden] { display: none; }
+
+.aviso-cookies__principal {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
   text-align: center;
-  box-shadow: 0 -4px 18px rgba(0,0,0,.2);
 }
-/* precisa ter mais especificidade que ".aviso-cookies", senão o "display: flex"
-   acima sobrescreve o atributo "hidden" do HTML e o aviso nunca some */
-.aviso-cookies[hidden] { display: none; }
 .aviso-cookies p { margin: 0; font-size: .85rem; max-width: 640px; }
+
+/* Botão "Saiba mais": parece um link, mas é um <button> (só abre/fecha o painel) */
+.aviso-cookies__saiba-mais {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+  color: inherit;
+  text-decoration: underline;
+  font-size: .85rem;
+  cursor: pointer;
+}
+.aviso-cookies__saiba-mais:hover { color: var(--orange); }
+
+.aviso-cookies__botoes {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
 .aviso-cookies .btn--outline {
   color: var(--white);
   border-color: rgba(253,252,252,.5);
-  flex-shrink: 0;
 }
 .aviso-cookies .btn--outline:hover { border-color: var(--orange); color: var(--orange); }
+.aviso-cookies .btn--aceitar {
+  background: var(--orange);
+  color: var(--navy);
+  border: none;
+  padding: 10px 20px;
+}
+
+/* Painel de detalhes que abre com o botão "Saiba mais" */
+.aviso-cookies__detalhes {
+  max-width: 720px;
+  margin: 14px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  font-size: .8rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.aviso-cookies__detalhes p { max-width: none; margin: 0 0 8px; }
+.aviso-cookies__detalhes p:last-child { margin-bottom: 0; }
+.aviso-cookies__detalhes a { color: var(--white); text-decoration: underline; }
+.aviso-cookies__detalhes a:hover { color: var(--orange); }
 
 @media (min-width: 640px) {
-  .aviso-cookies { flex-direction: row; justify-content: center; text-align: left; }
+  .aviso-cookies__principal { flex-direction: row; justify-content: center; text-align: left; }
 }
 
 /* Enquanto o aviso de cookies está visível, sobe o botão flutuante do WhatsApp
