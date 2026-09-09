@@ -424,6 +424,20 @@ ul, ol { margin: 0; padding: 0; }
   margin: 28px 0 0;
 }
 
+/* Chamada para o Instagram, logo abaixo das fotos do portfólio */
+.portfolio__instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px auto 0;
+  width: fit-content;
+  color: var(--navy);
+  font-weight: 600;
+  transition: color .15s ease-out;
+}
+.portfolio__instagram:hover { color: var(--orange); }
+
 /* ===== TESTIMONIALS (empty state) ===== */
 .testimonials-empty {
   max-width: 560px;

@@ -3,32 +3,33 @@
 
 // Lista de fotos do portfólio. Para adicionar uma foto nova, é só acrescentar
 // um item aqui — o carrossel se ajusta sozinho, não precisa mexer no HTML.
-// TODO Pedro: ir trocando estas fotos de placeholder pelas fotos reais das obras
-// (pode chegar a até 10 fotos aqui, o carrossel aceita qualquer quantidade)
+// TODO Pedro: ainda faltam 3 fotos residenciais (a área gourmet em duas fotos
+// e a sala com sofá de couro) — chegaram só coladas no chat, sem virar arquivo
+// de verdade, então precisam ser reenviadas como arquivo pra entrar aqui.
 const FOTOS_PORTFOLIO = [
   {
-    src: 'img/portfolio/caso-1-antes.webp',
-    legenda: 'Laboratório antes da obra — só as paredes externas e o teto existiam.',
+    src: 'img/portfolio/reforma-comercial-fachada-academia-belo-horizonte.webp',
+    legenda: 'Reforma comercial de fachada em Belo Horizonte: obra planejada para não interromper o funcionamento do negócio.',
   },
   {
-    src: 'img/portfolio/caso-1-depois.webp',
-    legenda: 'Mesmo laboratório depois: estrutura interna construída do zero, pronto pra operar.',
+    src: 'img/portfolio/reforma-comercial-loja-recepcao-belo-horizonte.webp',
+    legenda: 'Reforma comercial de loja e recepção: ambiente novo entregue no prazo combinado, sem imprevistos para o dia a dia do comércio.',
   },
   {
-    src: 'img/portfolio/caso-2-antes.webp',
-    legenda: 'Apartamento antes da reforma.',
+    src: 'img/portfolio/obra-comercial-sala-reuniao-belo-horizonte.webp',
+    legenda: 'Sala de reuniões corporativa pronta para uso: organização em cada etapa da obra comercial, do início ao acabamento final.',
   },
   {
-    src: 'img/portfolio/caso-2-depois.webp',
-    legenda: 'Apartamento reformado — novo layout, mais luz, mais funcionalidade.',
+    src: 'img/portfolio/reforma-residencial-banheiro-belo-horizonte.webp',
+    legenda: 'Reforma residencial de banheiro em Belo Horizonte: execução acompanhada de perto, sem dor de cabeça para o morador.',
   },
   {
-    src: 'img/portfolio/caso-3-antes.webp',
-    legenda: 'Loja comercial antes da obra.',
+    src: 'img/portfolio/construcao-residencial-quarto-planejado-belo-horizonte.webp',
+    legenda: 'Quarto planejado entregue com acabamento de qualidade: construção tranquila, sem dor de cabeça e sem surpresas no orçamento.',
   },
   {
-    src: 'img/portfolio/caso-3-depois.webp',
-    legenda: 'Loja comercial entregue no prazo, pronta para receber os primeiros clientes.',
+    src: 'img/portfolio/reforma-residencial-sala-estar-belo-horizonte.webp',
+    legenda: 'Sala de estar reformada em apartamento: resultado que só uma obra bem planejada, sem surpresas pelo caminho, é capaz de entregar.',
   },
 ];
 
