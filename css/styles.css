@@ -262,7 +262,7 @@ ul, ol { margin: 0; padding: 0; }
 .hero__logo {
   /* logo maior, mas com margem menor embaixo — a altura total do hero
      (padding + logo + título + texto) fica praticamente igual à de antes */
-  height: clamp(56px, 11vw, 110px);
+  height: clamp(64px, 13vw, 150px);
   width: auto;
   margin: 0 auto clamp(2px, calc(20px - 1.5vw), 12px);
 }
