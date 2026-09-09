@@ -565,7 +565,7 @@ ul, ol { margin: 0; padding: 0; }
   z-index: 300;
   background: var(--navy);
   color: var(--white);
-  padding: 16px 20px;
+  padding: 10px 20px;
   box-shadow: 0 -4px 18px rgba(0,0,0,.2);
 }
 /* precisa ter mais especificidade que ".aviso-cookies", senão o "display" dos
@@ -575,11 +575,11 @@ ul, ol { margin: 0; padding: 0; }
 .aviso-cookies__principal {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
   text-align: center;
 }
-.aviso-cookies p { margin: 0; font-size: .85rem; max-width: 640px; }
+.aviso-cookies p { margin: 0; font-size: .78rem; max-width: 640px; }
 
 /* Botão "Saiba mais": parece um link, mas é um <button> (só abre/fecha o painel) */
 .aviso-cookies__saiba-mais {
@@ -589,26 +589,29 @@ ul, ol { margin: 0; padding: 0; }
   margin-left: 4px;
   color: inherit;
   text-decoration: underline;
-  font-size: .85rem;
+  font-size: .78rem;
   cursor: pointer;
 }
 .aviso-cookies__saiba-mais:hover { color: var(--orange); }
 
 .aviso-cookies__botoes {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 .aviso-cookies .btn--outline {
   color: var(--white);
   border-color: rgba(253,252,252,.5);
+  padding: 7px 14px;
+  font-size: .8rem;
 }
 .aviso-cookies .btn--outline:hover { border-color: var(--orange); color: var(--orange); }
 .aviso-cookies .btn--aceitar {
   background: var(--orange);
   color: var(--navy);
   border: none;
-  padding: 10px 20px;
+  padding: 7px 14px;
+  font-size: .8rem;
 }
 
 /* Painel de detalhes que abre com o botão "Saiba mais" */
