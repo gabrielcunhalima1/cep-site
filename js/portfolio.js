@@ -3,9 +3,8 @@
 
 // Lista de fotos do portfólio. Para adicionar uma foto nova, é só acrescentar
 // um item aqui — o carrossel se ajusta sozinho, não precisa mexer no HTML.
-// TODO Pedro: ainda faltam 3 fotos residenciais (a área gourmet em duas fotos
-// e a sala com sofá de couro) — chegaram só coladas no chat, sem virar arquivo
-// de verdade, então precisam ser reenviadas como arquivo pra entrar aqui.
+// TODO Pedro: ainda falta 1 foto (a área gourmet vista do lado do balcão/
+// churrasqueira) — só chegou colada no chat, sem virar arquivo de verdade.
 const FOTOS_PORTFOLIO = [
   {
     src: 'img/portfolio/reforma-comercial-fachada-academia-belo-horizonte.webp',
@@ -30,6 +29,14 @@ const FOTOS_PORTFOLIO = [
   {
     src: 'img/portfolio/reforma-residencial-sala-estar-belo-horizonte.webp',
     legenda: 'Sala de estar reformada em apartamento: resultado que só uma obra bem planejada, sem surpresas pelo caminho, é capaz de entregar.',
+  },
+  {
+    src: 'img/portfolio/reforma-residencial-area-gourmet-belo-horizonte.webp',
+    legenda: 'Área gourmet planejada em cobertura residencial: espaço pronto para reunir família e amigos, sem dor de cabeça na execução.',
+  },
+  {
+    src: 'img/portfolio/reforma-residencial-sala-sofa-couro-belo-horizonte.webp',
+    legenda: 'Sala de estar com acabamento premium: resultado de uma construção organizada, sem surpresas de última hora.',
   },
 ];
 
