@@ -8,11 +8,11 @@
 const FOTOS_PORTFOLIO = [
   {
     src: 'img/portfolio/reforma-comercial-fachada-academia-belo-horizonte.webp',
-    legenda: 'Reforma comercial de fachada em Belo Horizonte: obra planejada para não interromper o funcionamento do negócio.',
+    legenda: 'Reforma completa para a nova escola da Gracie Barra no bairro Santo Antônio, em Belo Horizonte: fachada e interiores totalmente repaginados e estruturados.',
   },
   {
     src: 'img/portfolio/reforma-comercial-loja-recepcao-belo-horizonte.webp',
-    legenda: 'Reforma comercial de loja e recepção: ambiente novo entregue no prazo combinado, sem imprevistos para o dia a dia do comércio.',
+    legenda: 'Reforma comercial completa de loja: ambiente novo entregue no prazo combinado e sem fugir do orçamento.',
   },
   {
     src: 'img/portfolio/obra-comercial-sala-reuniao-belo-horizonte.webp',
