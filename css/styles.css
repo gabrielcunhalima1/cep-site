@@ -378,6 +378,7 @@ ul, ol { margin: 0; padding: 0; }
   object-fit: cover;
   /* fundo visível enquanto a imagem carrega (efeito "lazy loading") */
   background: var(--gray-tint);
+  cursor: pointer; /* indica que dá pra clicar pra ver a foto inteira, maior */
 }
 .carrossel__item figcaption {
   padding: 16px 18px;
@@ -729,3 +730,52 @@ body.tem-aviso-cookies .whatsapp-float {
   70% { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 6px 18px rgba(0,0,0,.25); }
   100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 6px 18px rgba(0,0,0,.25); }
 }
+
+/* ===== LIGHTBOX (foto do portfólio em tamanho grande) ===== */
+/* trava o scroll da página atrás enquanto o lightbox está aberto */
+body.lightbox-aberto { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(4, 15, 38, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox__moldura { margin: 0; max-width: min(90vw, 640px); }
+.lightbox__imagem {
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  /* mostra a foto inteira, sem cortar como no carrossel */
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+.lightbox__legenda {
+  color: rgba(253, 252, 252, .85);
+  font-size: .9rem;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.lightbox__fechar {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(253, 252, 252, .12);
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .15s ease-out;
+}
+.lightbox__fechar:hover { background: var(--orange); color: var(--navy); }
