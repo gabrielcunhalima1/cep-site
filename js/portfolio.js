@@ -3,8 +3,6 @@
 
 // Lista de fotos do portfólio. Para adicionar uma foto nova, é só acrescentar
 // um item aqui — o carrossel se ajusta sozinho, não precisa mexer no HTML.
-// TODO Pedro: ainda falta 1 foto (a área gourmet vista do lado do balcão/
-// churrasqueira) — só chegou colada no chat, sem virar arquivo de verdade.
 const FOTOS_PORTFOLIO = [
   {
     src: 'img/portfolio/reforma-comercial-fachada-academia-belo-horizonte.webp',

@@ -692,11 +692,19 @@ body.tem-aviso-cookies .whatsapp-float {
   .footer__atende { grid-row: 1; grid-column: 2; }
   .footer__social { grid-column: 3; }
 }
+.footer__crea {
+  text-align: center;
+  color: rgba(253,252,252,.6);
+  font-size: .8rem;
+  margin: 20px 0 0;
+}
+.footer__email { color: inherit; text-decoration: underline; }
+.footer__email:hover { color: var(--orange); }
 .footer__copy {
   text-align: center;
   color: rgba(253,252,252,.5);
   font-size: .8rem;
-  margin: 40px 0 0;
+  margin: 8px 0 0;
 }
 .footer__top {
   color: rgba(253,252,252,.7);
