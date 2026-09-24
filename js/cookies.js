@@ -16,6 +16,10 @@ const detalhesCookies = document.getElementById('detalhesCookies');
 if (avisoCookies && botaoAceitarCookies && botaoRejeitarCookies) {
   const preferenciaJaEscolhida = localStorage.getItem(CHAVE_PREFERENCIA_COOKIES);
 
+  if (preferenciaJaEscolhida === 'aceitos') {
+    carregarAnalytics();
+  }
+
   if (!preferenciaJaEscolhida) {
     avisoCookies.hidden = false;
     // Classe no <body> empurra o botão flutuante do WhatsApp para cima,
@@ -29,7 +33,10 @@ if (avisoCookies && botaoAceitarCookies && botaoRejeitarCookies) {
     document.body.classList.remove('tem-aviso-cookies');
   }
 
-  botaoAceitarCookies.addEventListener('click', () => escolherPreferencia('aceitos'));
+  botaoAceitarCookies.addEventListener('click', () => {
+    escolherPreferencia('aceitos');
+    carregarAnalytics();
+  });
   botaoRejeitarCookies.addEventListener('click', () => escolherPreferencia('essenciais'));
 
   // Botão "Saiba mais" só abre/fecha o painel com os detalhes — não decide nada sozinho
