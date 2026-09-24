@@ -19,6 +19,9 @@ if (formularioTriagem) {
     // Monta a mensagem numa frase só, pronta pra virar a primeira mensagem do WhatsApp
     const mensagem = `Olá, vim pelo site! Sou ${nomeCliente} de ${cidadeCliente} e desejo o orçamento para minha ${tipoDeObra}.`;
 
+    // Registra o pedido de orçamento no Analytics (só o tipo de obra, sem nome nem cidade)
+    rastrearEvento('envio_formulario', { tipo_obra: tipoDeObra });
+
     // Abre o WhatsApp em uma nova aba, já com a mensagem preenchida
     window.open(montarLinkWhatsApp(mensagem), '_blank', 'noopener');
 
